@@ -23,8 +23,13 @@
         gap: 30px;
     }
 
+    aside ul {
+        background-color: transparent;
+    }
+
     aside ul li {
         margin: 14px 0;
+        border: 1px solid #e8e8e8;
     }
 
     .blog {
