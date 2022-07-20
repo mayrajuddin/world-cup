@@ -89,9 +89,36 @@ p {
     text-transform: capitalize;
     padding: 10px 24px;
     display: inline-block;
-    background: var(--highlight-color);
     border-radius: 4px;
+    font-weight: 600;
+    font-size: 18px;
     color: #fff;
+    position: relative;
+    z-index: 1;
+    transition: all ease-in .4s .2s;
+}
+
+
+.banner-content article a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--highlight-color);
+    z-index: -1;
+    border-radius: 4px;
+    transition: all ease-in-out .4s;
+}
+
+.banner-content article a:hover::before {
+    height: 0%;
+}
+
+.banner-content article a:hover {
+    background-color: var(--white-color);
+    color: var(--highlight-color);
 }
 
 .banner-content .banner-img {
@@ -142,7 +169,7 @@ aside ul li:hover a {
 }
 
 aside ul li a {
-    display: inline-block;
+    display: block;
     padding: 12px 0;
     text-transform: capitalize;
     color: var(--primary-color);

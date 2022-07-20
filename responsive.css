@@ -17,6 +17,13 @@
         margin-top: 40px;
     }
 
+    .banner-content article .elips {
+        max-width: 320px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
     /* main section start */
     .main-content {
         grid-template-columns: repeat(1, 1fr);
