@@ -36,9 +36,18 @@ p {
 
 :root {
     --primary-color: #161616;
-    --highlight-color: #ECBE03;
+    --highlight-color: #FF6347;
     --white-color: #fff;
     --tittle-fontsize: 18px;
+}
+
+.active {
+    background-color: var(--highlight-color);
+
+}
+
+.active a {
+    color: var(--white-color);
 }
 
 /* ================
@@ -116,13 +125,25 @@ aside ul li {
     background: var(--white-color);
     text-align: center;
     border-radius: 4px;
+    transition: all ease-in .4s;
+}
+
+aside ul li:hover {
+    background-color: var(--highlight-color);
+}
+
+aside ul li:hover a {
+    color: var(--white-color);
 }
 
 aside ul li a {
     display: inline-block;
-    padding: 5px 0;
+    padding: 12px 0;
     text-transform: capitalize;
     color: var(--primary-color);
+    font-size: 17px;
+    font-weight: 600;
+    transition: all ease-in .4s;
 }
 
 /* side menu style end */
@@ -137,8 +158,22 @@ aside ul li a {
     border-radius: 8px;
 }
 
+.cart-img {
+    width: 100%;
+    height: 155px;
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+}
+
 .cart img {
     width: 100%;
+    height: 100%;
+    transition: all ease-in-out .4s;
+
+}
+
+.cart:hover img {
+    transform: scale(1.1);
 }
 
 .cart .cart-content {
@@ -158,7 +193,8 @@ aside ul li a {
     transition: all linear .4s;
 }
 
-.cart .cart-content a:hover {
+.cart .cart-content a:hover,
+.cart:hover .cart-content a {
     border: 1px solid var(--highlight-color);
     color: var(--white-color);
 }
@@ -178,10 +214,12 @@ aside ul li a {
     visibility: hidden;
 }
 
-.cart .cart-content a:hover::before {
+.cart:hover .cart-content a::before {
     width: 100%;
     visibility: visible;
 }
+
+
 
 .cart .cart-content p {
     font-size: 16px;
